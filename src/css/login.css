@@ -1,0 +1,30 @@
+
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 70vh;
+}
+
+main .form--fieldset{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    border: none;
+    text-align: center;
+}
+
+main .form--fieldset:last-child{
+    border-left: 2px solid black;
+}
+
+.form--fieldset input{
+    width: 30%;
+    justify-self: center;
+    margin: 1%;
+    padding: 1%;
+}
+
+.form--fieldset figcaption{
+    font-size: 200%;
+}
