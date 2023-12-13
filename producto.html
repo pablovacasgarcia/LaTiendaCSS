@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La tienda - </title>
     <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/producto.css">
 </head>
 <body>
     <header>
@@ -29,14 +30,11 @@
                 <li class="menu--lista--entrada">
                     <a href="categoria.html" class="menu--lista--entrada__link">Accesorios</a>
                 </li>
-                <li class="menu--lista--entrada">
-                    <a href="login.html" class="menu--lista--entrada__link">Iniciar Sesión</a>
-                </li>
             </ul>
         </nav>
         <!--Logo principal-->
         <div class="logo">
-            <img src="src/img/logo.png" alt="Logo" class="logo--imagen">
+            <a href="index.html" class="logo--link">La tienda</a>
         </div>
         <!--Inicio de sesión y carrito-->
         <div class="acciones">
@@ -48,22 +46,28 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="container">
         <!--Sección para todo los detalles de un producto-->
         <section class="producto">
             <article class="producto--imagenes">
-                <div class="producto--imagenes--imagen">
-                    <img src="" alt="">
+                <div class="producto--imagenes--imagengrande">
+                    <img src="https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F35%2F17%2F3517c5981a6c2fe84fa0c70cd22b660dd29df07d.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D" alt="">
                 </div>
-                <div class="producto--imagenes--imagen">
-                    <img src="" alt="">
+                <div class="producto--imagenes--imageneschicas">
+                    <div class="producto--imagenes--imagenchica">
+                        <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fda%2Fb0%2Fdab06f35d4a432e9daa3a06429c9cf499190d3e5.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="">
+                    </div>
+                    <div class="producto--imagenes--imagenchica">
+                        <img src="https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F61%2F24%2F6124728f3c50556bbe23c590c22de61ae508f54d.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D" alt="">
+                    </div>
                 </div>
+                
             </article>
             <article class="producto--contenido">
                 <h2 class="producto--contenido--titulo">
-
+                    Sudadera con capucha DryMove™ Loose Fit
                 </h2>
-                <p class="producto--contenido--precio"></p>
+                <p class="producto--contenido--precio">39,99 €</p>
                 <ul class="producto--contenido--tallas">
                     <li class="producto--contenido--talla">XS</li>
                     <li class="producto--contenido--talla">S</li>
@@ -71,7 +75,7 @@
                     <li class="producto--contenido--talla">L</li>
                     <li class="producto--contenido--talla">XL</li>
                 </ul>
-                <button class="producto--contenido--añadir"></button>
+                <button class="producto--contenido--añadir">Añadir</button>
             </article>
         </section>
     </main>

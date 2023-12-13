@@ -1,0 +1,40 @@
+.producto {
+    width: 80vw;
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas, la primera ocupa 1fr y la segunda también 1fr */
+    gap: 5%;
+}
+  
+  .producto--imagenes {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr; /* Dos filas, la primera se ajusta al contenido y la segunda también */
+    gap: 1%;
+  }
+  
+  .producto--imagenes--imagengrande {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .producto--imagenes--imageneschicas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+  }
+  
+  
+  /* Asegurar que las imágenes ocupen el 100% del ancho del contenedor */
+  .producto--imagenes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+
+  .producto--contenido{
+    width: 100%;
+  }

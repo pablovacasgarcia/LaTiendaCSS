@@ -12,17 +12,54 @@
     padding: 0;
 }
 
+
+a:visited{
+    color: inherit;
+}
+
+/* Grid general */
+body{
+    width: 100vw;
+    position: relative;
+}
+
+.container{
+    width: 100vw;
+    display: grid;
+    grid-template-columns:
+    [container-start] 1fr [center-start] repeat(
+    8,
+    [col-start] minmax(min-content, 11rem) [col-end]
+    )
+    [center-end] 1fr [container-end];
+    grid-template-rows: 100vh repeat(6, min-content);
+    row-gap: 10vh;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    justify-items: center;
+    align-items: center;
+}
+
+
+section{
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
 /* Estilos para el menú hamburguesa */
 header{
     background-color: var(--headerfooter-bg);
     position: fixed;
     top: 0;
+    left: 0;
     color: var(--border-color);
     display: grid;
     height: 15vh;
     width: 100vw;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
+    z-index: 2;
+    opacity: 90%;
 }
 
 header a{
@@ -50,7 +87,7 @@ header a{
     top: 15vh;
     left: 0;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     width: 100vw;
     font-size: 20px;
     text-align: center;
@@ -67,6 +104,7 @@ header a{
 
 .menu--lista--entrada:last-child {
     border-bottom: none;
+    padding-bottom: 0;
 }
 
 .menu--lista--entrada a{
@@ -139,13 +177,9 @@ header a{
     opacity: 100%;
 }
 
-main{
-    margin-top: 20vh;
-}
-
 footer{
-    position: absolute;
     bottom: 0;
+    left: 0;
     background-color: var(--headerfooter-bg);
     width: 100vw;
     color: var(--border-color);
