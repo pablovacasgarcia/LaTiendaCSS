@@ -1,10 +1,13 @@
-
+@import url(normalize.css);
 
 main{
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100vh;
     align-items: center;
+    background-image: url(../img/fondo.jpg);
+    background-size: 20vw;
+    background-repeat: repeat;
 }
 
 main .form--fieldset{
@@ -13,6 +16,7 @@ main .form--fieldset{
     grid-template-rows: repeat(5, 1fr);
     border: none;
     text-align: center;
+    margin-top: 5vh;
 }
 
 main .form--fieldset:last-child{
@@ -20,12 +24,46 @@ main .form--fieldset:last-child{
 }
 
 .form--fieldset input{
+    height: 5vh;
     width: 30%;
     justify-self: center;
     margin: 1%;
     padding: 1%;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
 }
 
 .form--fieldset figcaption{
     font-size: 200%;
+    margin-bottom: 3vh;
 }
+
+.form--fieldset input[type=submit]{
+    background-color: var(--headerfooter-bg);
+    color: var(--headerfooter-color);
+    border: 1px solid var(--headerfooter-bg);
+    font-family: 'Coolvetica';
+}
+
+.form--fieldset input[type=submit]:hover{
+    background-color: var(--border-color);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-top: 15vh;
+    }
+
+    form:last-child{
+        margin-top: -20vh;
+    }
+
+    .form--fieldset input{
+        width: 70vw;
+    }
+
+  }

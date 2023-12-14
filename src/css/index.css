@@ -1,24 +1,34 @@
+@import url(normalize.css);
+
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 0;
-    width: 80vw;
+    width: 100%;
+    height: 100%;
 }
 
-.hero--article--imagen{
+.hero--imagen{
     margin: 0;
     width: 100%;
 }
 
-.hero--article--imagen:first-child{
-    justify-self: end;
-}
-
-.hero--article--imagen img{
+.hero--imagen img{
     width: 100%;
     height: 100%;
     object-fit: cover ;
     object-position: left;
+}
+
+.hero--contenido{
+    grid-column: 1 / -1;
+    margin-top: -60vh;
+    text-align: center;
+    font-size: 300%;
+    max-width: 70vw;
+    justify-self: center;
+    text-shadow: 1px 1px 20px var(--border-color);
 }
 
 .banner{
@@ -37,6 +47,17 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.banner--contenido{
+    margin-top: -20vh;
+    text-align: center;
+    font-size: 300%;
+    text-shadow: 1px 1px 20px var(--border-color);
+}
+
+.banner--contenido .logo--link{
+    font-size: 150%;
 }
 
 .carousel {
@@ -66,12 +87,22 @@
     object-position: top;
 }
 
+.carousel--texto{
+    text-align: center;
+    z-index: 1.5;
+    margin-top: -50vh;
+    font-size: 300%;
+    text-shadow: 1px 1px 20px var(--border-color);
+}
+
 .siguenos{
     width: 80vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-area: 5%;
+    gap: 2rem;
     justify-items: center;
+    align-items: center;
 }
 
 .siguenos--imagen{
@@ -82,4 +113,70 @@
 .siguenos--imagen img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+
+.siguenos--contenido{
+    text-align: center;
+    font-weight: bolder;
+    width: 70%;
+}
+
+.siguenos .rrss i{
+    border: 1px solid var(--headerfooter-bg);
+    border-radius: 15px;
+    padding: 3px;
+}
+
+.siguenos .rrss i:hover{
+    font-size: 105%;
+    background-color: var(--border-color);
+}
+
+.newsletter{
+    text-align: center;
+    background-color: var(--headerfooter-bg);
+    color: var(--headerfooter-color);
+    width: 40vw;
+    padding: 2rem;
+    border-radius: 10px;
+    font-size: 120%;
+}
+
+.newsletter--input{
+    margin-top: 2vh;
+    width: 80%;
+    border-radius: 20px;
+    height: 4vh;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .hero{
+        grid-template-columns: 1fr;
+    }
+    
+    .hero--imagen:nth-child(2){
+        display: none !important;
+    }
+
+    .siguenos{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .siguenos--imagen{
+        margin-bottom: 2vh;
+    }
+
+    .newsletter{
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+    .banner--contenido{
+        font-size: 200%;
+    }    
 }

@@ -3,13 +3,24 @@
     --headerfooter-bg: black;
     --headerfooter-color: white;
     --border-color: gainsboro;
-  }
+}
+
+/* Fuentes */
+@font-face {
+    font-family: 'Candlescript';
+    src: url(../fonts/Candlescript.otf);
+}
+@font-face {
+    font-family: 'Coolvetica';
+    src: url(../fonts/coolvetica\ rg.otf);
+}
 
 /* Quitar estilos predeterminados */
 *{
     text-decoration: none;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -17,14 +28,15 @@ a:visited{
     color: inherit;
 }
 
-/* Grid general */
+
 body{
-    width: 100vw;
-    position: relative;
+    width: 100%;
+    font-family: 'Coolvetica';
 }
 
+/* Grid general */
 .container{
-    width: 100vw;
+    width: 100%;
     display: grid;
     grid-template-columns:
     [container-start] 1fr [center-start] repeat(
@@ -32,7 +44,7 @@ body{
     [col-start] minmax(min-content, 11rem) [col-end]
     )
     [center-end] 1fr [container-end];
-    grid-template-rows: 100vh repeat(6, min-content);
+    grid-template-rows: 100vh repeat(5, min-content);
     row-gap: 10vh;
     margin-top: 15vh;
     margin-bottom: 10vh;
@@ -55,7 +67,7 @@ header{
     color: var(--border-color);
     display: grid;
     height: 15vh;
-    width: 100vw;
+    width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     z-index: 2;
@@ -78,6 +90,21 @@ header a{
     justify-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.acciones a:hover{
+    color: var(--border-color);
+}
+
+.acciones--login{
+    margin-top: 1vh;
+}
+
+/* Icono carrito */
+.ri-shopping-bag-line{
+    color: white;
+    font-size: 150%;
 }
 
 .menu--lista{
@@ -102,7 +129,7 @@ header a{
     border-bottom: 1px solid var(--border-color);
 }
 
-.menu--lista--entrada:last-child {
+.menu--lista--entrada:nth-child(4) {
     border-bottom: none;
     padding-bottom: 0;
 }
@@ -111,6 +138,10 @@ header a{
     color: var(--border-color);
     font-size: 100%;
     text-align: center;
+}
+
+.menu--lista--entrada:last-child{
+    display: none;
 }
 
 .menu--toggle--input {
@@ -128,6 +159,7 @@ header a{
     justify-content: center;
     gap: 10px;
     transition-duration: .5s;
+    margin-top: -2vh;
 }
   
 .menu--toggle--bars {
@@ -177,15 +209,23 @@ header a{
     opacity: 100%;
 }
 
+.logo--link{
+    font-family: 'Candlescript';
+}
+
 footer{
-    bottom: 0;
-    left: 0;
     background-color: var(--headerfooter-bg);
-    width: 100vw;
+    width: 100%;
     color: var(--border-color);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+footer h4{
+    margin-bottom: 1rem;
 }
 
 footer a{
@@ -198,4 +238,46 @@ footer a{
 
 footer .rrss{
     grid-area: 2 / 2 / 3 / 4;
+}
+
+.pagos{
+    text-align: center;
+}
+
+.pagos i{
+    font-size: 150%;
+}
+
+.rrss{
+    font-size: 300%;
+    margin-top: 2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .acciones{
+        grid-template-columns: 1fr;
+    }
+
+    .acciones--login{
+        display: none;
+    }
+
+    .menu--lista--entrada:last-child{
+        display: inherit;
+    }
+
+    .menu--lista--entrada:last-child {
+        border-bottom: none;
+    }
+
+    .menu--lista--entrada:nth-child(4) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .rrss{
+        font-size: 200%;
+    }
 }

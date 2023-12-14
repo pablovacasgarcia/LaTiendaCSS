@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La tienda - Carrito</title>
-    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/carrito.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <!--Logo principal-->
         <div class="logo">
-            <a href="index.html" class="logo--link">La tienda</a>
+            <a href="index.html" class="logo--link"><h1>La tienda</h1></a>
         </div>
         <!--Inicio de sesión y carrito-->
         <div class="acciones">
@@ -23,7 +24,53 @@
         </div>
     </header>
     <main>
-
+        <section class="cesta">
+            <div class="cesta--productos">
+                <article class="cesta--producto">
+                    <div class="cesta--producto--imagen">
+                        <img src="https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2Fb4%2Fe4%2Fb4e400fdfb90e3b658d970aec1d2de6b0c353701.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D" alt="Jersey" class="cesta--producto--imagen">
+                    </div>
+                    <h3 class="cesta--producto--nombre">Jersey en punto jacquard</h3>
+                    <p class="cesta--producto--precio">15,99 €</p>
+                    <div class="producto--acciones">
+                        <p>+</p>
+                        <p class="cesta--producto--cantidad">2</p>
+                        <p>-</p>
+                        <i class="ri-delete-bin-line"></i>
+                    </div>
+                </article>
+                <article class="cesta--producto">
+                    <div class="cesta--producto--imagen">
+                        <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F61%2F05%2F61051ba1ded6a8274478ad876d5e140ce2672fdf.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bkids_girls_clothing_dresses_longsleeve%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]" alt="Jersey" class="cesta--producto--imagen">
+                    </div>
+                    <h3 class="cesta--producto--nombre">Vestido de punto con motivo estampado</h3>
+                    <p class="cesta--producto--precio">11,99 €</p>
+                    <div class="producto--acciones">
+                        <p>+</p>
+                        <p class="cesta--producto--cantidad">1</p>
+                        <p>-</p>
+                        <i class="ri-delete-bin-line"></i>
+                    </div>
+                </article>
+                <article class="cesta--producto">
+                    <div class="cesta--producto--imagen">
+                        <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fad%2F54%2Fad545e1837e33c9921cfd4fabfe8d518da1f1e7f.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]" alt="Jersey" class="cesta--producto--imagen">
+                    </div>
+                    <h3 class="cesta--producto--nombre">Gorro con borla</h3>
+                    <p class="cesta--producto--precio">5,99 €</p>
+                    <div class="producto--acciones">
+                        <p>+</p>
+                        <p class="cesta--producto--cantidad">3</p>
+                        <p>-</p>
+                        <i class="ri-delete-bin-line"></i>
+                    </div>
+                </article>
+            </div>
+            <div class="cesta--total">
+                <p class="total--precio">33,97€</p>
+                <button class="total--pago"><i class="ri-bank-card-fill"></i> Proceder al pago</button>
+            </div>
+        </section>
     </main>
 </body>
 </html>

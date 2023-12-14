@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La tienda - </title>
-    <link rel="stylesheet" href="src/css/normalize.css">
     <link rel="stylesheet" href="src/css/producto.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -30,11 +30,14 @@
                 <li class="menu--lista--entrada">
                     <a href="categoria.html" class="menu--lista--entrada__link">Accesorios</a>
                 </li>
+                <li class="menu--lista--entrada">
+                    <a href="login.html" class="menu--lista--entrada__link">Iniciar Sesión</a>
+                </li>
             </ul>
         </nav>
         <!--Logo principal-->
         <div class="logo">
-            <a href="index.html" class="logo--link">La tienda</a>
+            <a href="index.html" class="logo--link"><h1>La tienda</h1></a>
         </div>
         <!--Inicio de sesión y carrito-->
         <div class="acciones">
@@ -42,26 +45,24 @@
                 <a href="login.html" class="acciones--login__link">Iniciar Sesión</a>
             </div>
             <div class="acciones--carrito">
-                <a href="carrito.html" class="acciones--carrito__link"><img src="src/img/carrito.png" alt="Cesta de la compra" class="acciones--carrito__icono"></a>
+                <a href="carrito.html" class="acciones--carrito__link"><i class="ri-shopping-bag-line"></i></a>
             </div>
         </div>
     </header>
     <main class="container">
-        <!--Sección para todo los detalles de un producto-->
         <section class="producto">
             <article class="producto--imagenes">
                 <div class="producto--imagenes--imagengrande">
-                    <img src="https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F35%2F17%2F3517c5981a6c2fe84fa0c70cd22b660dd29df07d.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D" alt="">
+                    <img id="imagenGrande" src="https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F35%2F17%2F3517c5981a6c2fe84fa0c70cd22b660dd29df07d.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D" alt="">
                 </div>
                 <div class="producto--imagenes--imageneschicas">
                     <div class="producto--imagenes--imagenchica">
-                        <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fda%2Fb0%2Fdab06f35d4a432e9daa3a06429c9cf499190d3e5.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="">
+                        <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fda%2Fb0%2Fdab06f35d4a432e9daa3a06429c9cf499190d3e5.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" alt="Foto pequeña 1" class="imagenChica">
                     </div>
                     <div class="producto--imagenes--imagenchica">
-                        <img src="https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F61%2F24%2F6124728f3c50556bbe23c590c22de61ae508f54d.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D" alt="">
+                        <img src="https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F61%2F24%2F6124728f3c50556bbe23c590c22de61ae508f54d.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D" alt="Foto pequeña 2" class="imagenChica">
                     </div>
                 </div>
-                
             </article>
             <article class="producto--contenido">
                 <h2 class="producto--contenido--titulo">
@@ -75,35 +76,59 @@
                     <li class="producto--contenido--talla">L</li>
                     <li class="producto--contenido--talla">XL</li>
                 </ul>
-                <button class="producto--contenido--añadir">Añadir</button>
+                <button class="producto--contenido--añadir"><i class="ri-shopping-bag-line"></i> Añadir al carrito</button>
             </article>
         </section>
     </main>
+    
     <!--Footer-->
     <footer>
         <!--Primer nivel footer-->
         <article class="ayuda">
             <h4 class="ayuda--titulo">Ayuda</h4>
+            <p>Preguntas frecuentes</p>
+            <p>Soporte</p>
         </article>
         <article class="nosotros">
             <h4 class="nosotros--titulo">Nosotros</h4>
+            <p>Acerca de La tienda</p>
+            <p>Ubicación y contacto</p>
         </article>
         <article class="legal">
             <h4 class="legal--titulo">Legal</h4>
+            <p>Política de cookies</p>
+            <p>Privacidad</p>
         </article>
         <article class="pagos">
             <h4 class="pagos--titulo">Métodos de pago</h4>
-            <a href=""><img src="visa.png" alt="Visa Link"></a>
-            <a href=""><img src="mastercard.png" alt="Mastercard Link"></a>
-            <a href=""><img src="paypal.png" alt="Paypal Link"></a>
+            <a href=""><i class="ri-visa-fill"></i></a>
+            <a href=""><i class="ri-mastercard-fill"></i></a>
+            <a href=""><i class="ri-paypal-fill"></i></a>
         </article>
         <!--Segundo nivel footer-->
         <article class="rrss">
-            <a href=""><img src="youtube.png" alt="Youtube Link"></a>
-            <a href=""><img src="instagram.png" alt="Instagram Link"></a>
-            <a href=""><img src="twitter.png" alt="Twitter Link"></a>
-            <a href=""><img src="facebook.png" alt="Facebook Link"></a>
+            <a href=""><i class="ri-youtube-fill"></i></a>
+            <a href=""><i class="ri-instagram-fill"></i></a>
+            <a href=""><i class="ri-twitter-fill"></i></a>
+            <a href=""><i class="ri-facebook-fill"></i></a>
         </article>
     </footer>
 </body>
+
+<script>
+        document.querySelectorAll(".imagenChica").forEach(imagen => {
+            imagen.addEventListener("click", (e)=>{
+                cambiarImagen(e)
+            })
+        });
+
+    function cambiarImagen(e) {
+        imagenGrande=document.getElementById("imagenGrande");
+        enlace= imagenGrande.src;
+
+        imagenGrande.src=e.target.src;
+        e.target.src=enlace;
+    }
+
+</script>
 </html>

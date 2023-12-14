@@ -1,3 +1,5 @@
+@import url(normalize.css);
+
 .producto {
     width: 80vw;
     grid-row: 1 / -1;
@@ -36,5 +38,55 @@
   
 
   .producto--contenido{
+    width: 25vw;
+    margin-top: 10vh;
+  }
+
+  .producto--contenido--precio{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-size: 150%;
+  }
+
+  .producto--contenido--tallas{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3vh;
+  }
+
+  .producto--contenido--talla{
+    border: 1px solid var(--border-color);
+    width: 3rem;
+    text-align: center;
+  }
+
+  .producto--contenido--talla:hover{
+    background-color: var(--border-color);
+    cursor: pointer;
+  }
+
+  .producto--contenido--añadir{
+    background-color: var(--headerfooter-bg);
+    color: var(--headerfooter-color);
+    padding: 0.4rem;
     width: 100%;
+    font-family: 'Coolvetica';
+  }
+
+  .producto--contenido--añadir:hover{
+    background-color: var(--border-color);
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 900px) {
+    .producto{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .producto--contenido{
+      width: 80vw;
+      margin-bottom: 2vh;
+    }
   }
