@@ -50,6 +50,15 @@ main .form--fieldset:last-child{
     cursor: pointer;
 }
 
+input:focus:invalid{
+    color: rgb(128, 33, 33);
+    background-color: rgb(250, 189, 189);
+}
+
+input:focus:valid{
+    background-color: rgb(188, 248, 188);
+}
+
 @media screen and (max-width: 900px) {
     main{
         display: grid;
